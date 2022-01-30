@@ -1,0 +1,31 @@
+{
+  "name": "antoniogoulao.dev",
+  "author": {
+    "name": "Antonio Goulao",
+    "email": "antoniomgoulao@protonmail.com",
+    "url": "antoniogoulao.dev"
+  },
+  "description": "My personal website",
+  "license": "Apache License 2.0",
+  "private": true,
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start"
+  },
+  "dependencies": {
+    "@emotion/react": "^11.7.1",
+    "@emotion/server": "^11.4.0",
+    "@emotion/styled": "^11.6.0",
+    "@mui/material": "^5.3.1",
+    "next": "latest",
+    "react": "17.0.2",
+    "react-dom": "17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^17.0.13",
+    "@types/react": "^17.0.38",
+    "typescript": "^4.5.5"
+  }
+}
