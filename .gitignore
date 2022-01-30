@@ -12,6 +12,9 @@
 /.next/
 /out/
 
+# github
+/docs/
+
 # production
 /build
 
