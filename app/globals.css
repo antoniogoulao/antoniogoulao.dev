@@ -1,0 +1,36 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Light mode — default */
+:root {
+  --color-background: #FFF8F2;
+  --color-surface: #F0E8E0;
+  --color-primary: #D9480F;
+  --color-secondary: #FFB703;
+  --color-foreground: #2B2118;
+  --color-muted: #7A6A5A;
+}
+
+/* Dark mode */
+.dark {
+  --color-background: #1A1410;
+  --color-surface: #241C16;
+  --color-primary: #FF6B00;
+  --color-secondary: #FFD166;
+  --color-foreground: #F5EDE6;
+  --color-muted: #B8A99A;
+}
+
+*,
+*::before,
+*::after {
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+}
+
+body {
+  background-color: var(--color-background);
+  color: var(--color-foreground);
+  font-family: var(--font-sans), system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+}
