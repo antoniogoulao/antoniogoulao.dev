@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "about": "Sobre",
+    "work": "Trabalho",
+    "projects": "Projetos",
+    "blog": "Blog",
+    "books": "Livros"
+  },
+  "hero": {
+    "greeting": "Olá, sou o",
+    "tagline": "Engenheiro Mobile · Motociclista · Leitor",
+    "bio": "A desenvolver aplicações mobile e web na Uphill Health. Apaixonado por sistemas limpos, longas viagens de mota e bons livros.",
+    "blogCta": "Ler o blog",
+    "rideAndListen": "Ride & Listen"
+  },
+  "sections": {
+    "experience": "Experiência",
+    "projects": "Projetos GitHub"
+  },
+  "blog": {
+    "heading": "Escrita",
+    "subtitle": "Reflexões sobre software, motas e livros.",
+    "noPosts": "Ainda sem publicações. Volte em breve.",
+    "back": "← Voltar ao blog"
+  },
+  "books": {
+    "heading": "Lista de Leituras",
+    "subtitle": "Livros que li, agrupados por ano."
+  }
+}

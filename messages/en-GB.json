@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "about": "About",
+    "work": "Work",
+    "projects": "Projects",
+    "blog": "Blog",
+    "books": "Books"
+  },
+  "hero": {
+    "greeting": "Hello, I'm",
+    "tagline": "Mobile Engineer · Rider · Reader",
+    "bio": "Building mobile and web applications at Uphill Health. Passionate about clean systems, long rides on two wheels, and good books.",
+    "blogCta": "Read my blog",
+    "rideAndListen": "Ride & Listen"
+  },
+  "sections": {
+    "experience": "Experience",
+    "projects": "GitHub Projects"
+  },
+  "blog": {
+    "heading": "Writing",
+    "subtitle": "Thoughts on software, riding, and books.",
+    "noPosts": "No posts yet. Check back soon.",
+    "back": "← Back to blog"
+  },
+  "books": {
+    "heading": "Reading List",
+    "subtitle": "Books I've read, grouped by year."
+  }
+}

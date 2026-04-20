@@ -1,0 +1,30 @@
+{
+  "nav": {
+    "about": "À propos",
+    "work": "Travail",
+    "projects": "Projets",
+    "blog": "Blog",
+    "books": "Livres"
+  },
+  "hero": {
+    "greeting": "Bonjour, je suis",
+    "tagline": "Ingénieur Mobile · Motard · Lecteur",
+    "bio": "Je développe des applications mobile et web chez Uphill Health. Passionné par les systèmes propres, les longues balades à moto et les bons livres.",
+    "blogCta": "Lire mon blog",
+    "rideAndListen": "Ride & Listen"
+  },
+  "sections": {
+    "experience": "Expérience",
+    "projects": "Projets GitHub"
+  },
+  "blog": {
+    "heading": "Écriture",
+    "subtitle": "Réflexions sur le logiciel, la moto et les livres.",
+    "noPosts": "Aucune publication pour l'instant. Revenez bientôt.",
+    "back": "← Retour au blog"
+  },
+  "books": {
+    "heading": "Liste de Lecture",
+    "subtitle": "Livres lus, regroupés par année."
+  }
+}
