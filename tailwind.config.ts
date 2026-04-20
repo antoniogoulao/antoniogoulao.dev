@@ -1,4 +1,6 @@
 import type { Config } from 'tailwindcss';
+// eslint-disable-next-line @typescript-eslint/no-require-imports
+import typography = require('@tailwindcss/typography');
 
 export default {
   content: [
@@ -10,12 +12,13 @@ export default {
   theme: {
     extend: {
       colors: {
-        background: 'var(--color-background)',
-        surface: 'var(--color-surface)',
-        primary: 'var(--color-primary)',
-        secondary: 'var(--color-secondary)',
-        foreground: 'var(--color-foreground)',
-        muted: 'var(--color-muted)',
+        background: 'rgb(var(--color-background) / <alpha-value>)',
+        surface: 'rgb(var(--color-surface) / <alpha-value>)',
+        primary: 'rgb(var(--color-primary) / <alpha-value>)',
+        secondary: 'rgb(var(--color-secondary) / <alpha-value>)',
+        foreground: 'rgb(var(--color-foreground) / <alpha-value>)',
+        muted: 'rgb(var(--color-muted) / <alpha-value>)',
+        border: 'rgb(var(--color-border) / <alpha-value>)',
       },
       fontFamily: {
         serif: ['var(--font-serif)', 'Georgia', 'serif'],
@@ -23,5 +26,5 @@ export default {
       },
     },
   },
-  plugins: [require('@tailwindcss/typography')],
+  plugins: [typography],
 } satisfies Config;

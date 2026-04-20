@@ -9,7 +9,13 @@ const config: Config = {
   moduleNameMapper: {
     '^@/(.*)$': '<rootDir>/$1',
   },
-  testMatch: ['**/__tests__/**/*.test.{ts,tsx}'],
+  testMatch: [
+    '**/__tests__/**/*.{ts,tsx}',
+    '**/*.{test,spec}.{ts,tsx}',
+  ],
+  transformIgnorePatterns: [
+    '/node_modules/(?!(framer-motion|next-mdx-remote|remark-gfm)/)',
+  ],
 };
 
 export default createJestConfig(config);

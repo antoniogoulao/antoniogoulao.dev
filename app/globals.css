@@ -4,33 +4,34 @@
 
 /* Light mode — default */
 :root {
-  --color-background: #FFF8F2;
-  --color-surface: #F0E8E0;
-  --color-primary: #D9480F;
-  --color-secondary: #FFB703;
-  --color-foreground: #2B2118;
-  --color-muted: #7A6A5A;
+  --color-background: 255 248 242;
+  --color-surface: 240 232 224;
+  --color-primary: 217 72 15;
+  --color-secondary: 255 183 3;
+  --color-foreground: 43 33 24;
+  --color-muted: 122 106 90;
+  --color-border: 43 33 24;
 }
 
 /* Dark mode */
 .dark {
-  --color-background: #1A1410;
-  --color-surface: #241C16;
-  --color-primary: #FF6B00;
-  --color-secondary: #FFD166;
-  --color-foreground: #F5EDE6;
-  --color-muted: #B8A99A;
+  --color-background: 26 20 16;
+  --color-surface: 36 28 22;
+  --color-primary: 255 107 0;
+  --color-secondary: 255 209 102;
+  --color-foreground: 245 237 230;
+  --color-muted: 184 169 154;
+  --color-border: 245 237 230;
 }
 
-*,
-*::before,
-*::after {
-  transition: background-color 0.2s ease, border-color 0.2s ease;
+html,
+body {
+  transition: background-color 0.2s ease, color 0.2s ease;
 }
 
 body {
-  background-color: var(--color-background);
-  color: var(--color-foreground);
+  background-color: rgb(var(--color-background));
+  color: rgb(var(--color-foreground));
   font-family: var(--font-sans), system-ui, sans-serif;
   -webkit-font-smoothing: antialiased;
 }
