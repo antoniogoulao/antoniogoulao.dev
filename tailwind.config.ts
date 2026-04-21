@@ -1,6 +1,5 @@
 import type { Config } from 'tailwindcss';
-// eslint-disable-next-line @typescript-eslint/no-require-imports
-import typography = require('@tailwindcss/typography');
+import typography from '@tailwindcss/typography';
 
 export default {
   content: [
