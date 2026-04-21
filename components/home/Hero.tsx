@@ -28,7 +28,7 @@ export function Hero({locale}: {locale: string}) {
         className="font-serif text-6xl md:text-7xl leading-[1.0] mb-4 text-foreground"
       >
         António{' '}
-        <em className="italic text-primary" style={{fontStyle: 'italic'}}>
+        <em className="text-primary">
           Goulão
         </em>
       </motion.h1>
