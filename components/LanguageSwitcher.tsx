@@ -16,15 +16,19 @@ export function LanguageSwitcher({locale}: {locale: string}) {
   function switchLocale(next: Locale) {
     const segments = pathname.split('/');
     segments[1] = next;
-    router.push(segments.join('/') || '/');
+    const {search, hash} = window.location;
+    router.push(`${segments.join('/')}${search}${hash}`);
   }
 
   return (
-    <div className="flex items-center gap-0.5">
+    <div role="group" aria-label="Language" className="flex items-center gap-0.5">
       {routing.locales.map(l => (
         <button
           key={l}
+          type="button"
           onClick={() => switchLocale(l)}
+          aria-current={locale === l ? 'true' : undefined}
+          aria-label={`Switch to ${LABELS[l]}`}
           className={`text-xs px-1.5 py-0.5 rounded transition-colors ${
             locale === l
               ? 'text-primary border border-primary'
