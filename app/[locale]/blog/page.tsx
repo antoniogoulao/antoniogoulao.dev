@@ -1,5 +1,5 @@
 import Link from 'next/link';
-import {setRequestLocale, getTranslations} from 'next-intl/server';
+import {setRequestLocale, getTranslations, getFormatter} from 'next-intl/server';
 import {getAllPosts} from '@/lib/mdx';
 import {SectionDivider} from '@/components/SectionDivider';
 
@@ -11,6 +11,7 @@ export default async function BlogPage({
   const {locale} = await params;
   setRequestLocale(locale);
   const t = await getTranslations('blog');
+  const format = await getFormatter();
   const posts = getAllPosts(locale);
 
   return (
@@ -31,9 +32,9 @@ export default async function BlogPage({
               href={`/${locale}/blog/${post.slug}`}
               className="block py-8 group"
             >
-              <p className="text-xs text-muted uppercase tracking-wide mb-2 font-sans">
-                {post.date}
-              </p>
+              <time dateTime={post.date} className="text-xs text-muted uppercase tracking-wide mb-2 font-sans block">
+                {format.dateTime(new Date(post.date), {year: 'numeric', month: 'short', day: 'numeric'})}
+              </time>
               <h2 className="font-serif italic text-2xl md:text-3xl text-foreground group-hover:text-primary transition-colors mb-3">
                 {post.title}
               </h2>
