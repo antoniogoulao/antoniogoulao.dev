@@ -1,4 +1,4 @@
-import {setRequestLocale, getTranslations} from 'next-intl/server';
+import {setRequestLocale, getTranslations, getFormatter} from 'next-intl/server';
 import {MDXRemote} from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
 import Link from 'next/link';
@@ -24,6 +24,7 @@ export default async function BlogPostPage({
   const {locale, slug} = await params;
   setRequestLocale(locale);
   const t = await getTranslations('blog');
+  const format = await getFormatter();
   const {meta, content} = getPostContent(slug, locale);
 
   return (
@@ -35,7 +36,9 @@ export default async function BlogPostPage({
         {t('back')}
       </Link>
 
-      <p className="text-xs text-muted uppercase tracking-wide mb-4 font-sans">{meta.date}</p>
+      <time dateTime={meta.date} className="text-xs text-muted uppercase tracking-wide mb-4 font-sans block">
+        {format.dateTime(new Date(meta.date), {year: 'numeric', month: 'short', day: 'numeric'})}
+      </time>
 
       <h1 className="font-serif italic text-4xl md:text-5xl text-foreground mb-12 leading-tight">
         {meta.title}
