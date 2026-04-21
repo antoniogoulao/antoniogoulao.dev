@@ -14,11 +14,12 @@ export async function fetchGitHubRepos(
 ): Promise<GitHubRepo[]> {
   try {
     const res = await fetch(
-      `https://api.github.com/users/${username}/repos?sort=stars&per_page=100`,
-      {cache: 'force-cache'}
+      `https://api.github.com/users/${username}/repos?per_page=100`,
+      {next: {revalidate: 3600}}
     );
     if (!res.ok) return [];
-    const repos: GitHubRepo[] = await res.json();
+    const data: unknown = await res.json();
+    const repos = Array.isArray(data) ? (data as GitHubRepo[]) : [];
     return repos
       .filter(r => !r.fork)
       .sort((a, b) => b.stargazers_count - a.stargazers_count)
