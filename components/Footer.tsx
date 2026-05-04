@@ -16,7 +16,7 @@ export function Footer() {
             GitHub
           </a>
           <a
-            href="https://linkedin.com/in/antoniogoulao"
+            href="https://www.linkedin.com/in/antoniomgoulao/"
             target="_blank"
             rel="noopener noreferrer"
             className="text-muted hover:text-foreground transition-colors"
