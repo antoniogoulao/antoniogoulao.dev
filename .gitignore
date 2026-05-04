@@ -1,5 +1,8 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
+# idea
+.idea/
+
 # dependencies
 /node_modules
 /.pnp
@@ -38,3 +41,5 @@ yarn-error.log*
 
 # TypeScript incremental build cache
 tsconfig.tsbuildinfo
+
+docs/superpowers/
