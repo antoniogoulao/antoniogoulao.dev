@@ -5,7 +5,6 @@ const withNextIntl = createNextIntlPlugin();
 
 const nextConfig: NextConfig = {
   output: 'export',
-  distDir: 'docs',
   trailingSlash: true,
   images: {unoptimized: true},
 };
