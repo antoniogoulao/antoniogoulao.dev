@@ -1,4 +1,4 @@
-# Design: Active Nav Indicator + Mouse-Following Hero Gradient
+# Design: Active Nav Indicator, Mouse-Following Hero Gradient & Favicon
 
 **Date:** 2026-05-04
 **Status:** Approved
@@ -7,10 +7,11 @@
 
 ## Overview
 
-Two independent UI enhancements to the personal website:
+Three independent UI enhancements to the personal website:
 
 1. **Active nav indicator** — a small orange dot below the nav link corresponding to the current page or visible section.
 2. **Mouse-following hero gradient** — the decorative background gradient in the Hero section tracks the cursor, replacing the static blob.
+3. **Favicon** — an SVG icon matching the nav logo: dark rounded square with "ag." in orange serif italic.
 
 ---
 
@@ -55,9 +56,40 @@ Two independent UI enhancements to the personal website:
 
 ---
 
+---
+
+## Feature 3: Favicon
+
+### Visual
+
+- Style B: dark rounded square (`#1a1410` fill, `rx="6"`) with "ag." centred in orange (`#ff6b00`) Georgia serif italic at ~17px.
+- Matches the nav logo "ag." exactly in colour and typeface.
+
+### Implementation
+
+- Create `app/icon.svg` — Next.js App Router picks this up automatically and injects `<link rel="icon">` into every page's `<head>`.
+- The existing `public/favicon.ico` stays as fallback for legacy browsers; no changes needed there.
+
+### SVG structure
+
+```svg
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="32" height="32">
+  <rect width="32" height="32" rx="6" fill="#1a1410"/>
+  <text x="16" y="22" text-anchor="middle"
+        font-family="Georgia, serif" font-style="italic"
+        font-size="17" fill="#ff6b00" letter-spacing="-0.5">ag.</text>
+</svg>
+```
+
+### Files changed
+
+- `app/icon.svg` — new file.
+
+---
+
 ## Constraints
 
-- Both changes are purely cosmetic — no data fetching, no routing changes, no new dependencies.
-- Both components are already `'use client'`.
+- All three changes are purely cosmetic — no data fetching, no routing changes, no new dependencies.
+- Nav and Hero components are already `'use client'`.
 - The `IntersectionObserver` in Nav must be set up only when on the home page (pathname === `/${locale}`) to avoid querying non-existent DOM nodes on other pages.
 - `IntersectionObserver` must be cleaned up in the `useEffect` return.
