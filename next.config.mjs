@@ -1,9 +1,9 @@
 import createNextIntlPlugin from 'next-intl/plugin';
-import type {NextConfig} from 'next';
 
 const withNextIntl = createNextIntlPlugin();
 
-const nextConfig: NextConfig = {
+/** @type {import('next').NextConfig} */
+const nextConfig = {
   output: 'export',
   trailingSlash: true,
   images: {unoptimized: true},

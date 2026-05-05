@@ -1,27 +1,33 @@
 export interface ExperienceEntry {
+  key: string;
   title: string;
   company: string;
   period: string;
-  description: string;
 }
 
 export const experience: ExperienceEntry[] = [
   {
-    title: 'Software Engineer',
+    key: 'uphill',
+    title: 'Senior Mobile & FE Developer',
     company: 'Uphill Health - PT',
-    period: '2024 — Present',
-    description: 'Building mobile and web health applications with React Native and Next.js. Focused on clean architecture, performance, and great user experiences.',
+    period: '2024 — 2026',
   },
   {
-    title: 'Mobile Developer',
+    key: 'collibra',
+    title: 'Senior Mobile & FE Developer',
     company: 'Collibra NV - BE',
     period: '2018 — 2024',
-    description: 'Developed cross-platform mobile applications using React Native. Worked closely with design and product teams to deliver polished iOS and Android experiences.',
   },
   {
-    title: 'Frontend Developer',
+    key: 'celfocus',
+    title: 'Consultant',
     company: 'Celfocus S.A. - PT',
     period: '2015 — 2018',
-    description: 'Built responsive applications for Android STBs with Java. Contributed to component libraries and improved developer tooling.',
+  },
+  {
+    key: 'premiumMinds',
+    title: 'Summer Intern',
+    company: 'Premium Minds - PT',
+    period: '2013-2013',
   },
 ];
