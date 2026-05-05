@@ -13,6 +13,28 @@
     "blogCta": "Read my blog",
     "rideAndListen": "Ride & Listen"
   },
+  "experience": {
+    "uphill": [
+      "Liber - Rewrite in React Native of the multiplatform application for Android, iOS and iPadOS.",
+      "Lanyard - Development of an RPA that navigates and extracts data from a web app.",
+      "UpHill - Maintenance and development of the platform interface used by doctors and nurses to manage patient journeys."
+    ],
+    "collibra": [
+      "Collibra for Mobile - Development of a new multiplatform application for Android, iOS and iPadOS.",
+      "Data Marketplace - Development of a new portal that ensures users can intuitively find, understand, and collaborate with trusted data.",
+      "Collibra for Desktop - Development of a new multiplatform application for MacOS, Windows, and Linux.",
+      "Collibra Chrome Extension - Development of a new extension to run on Chromium based browsers that integrates with the Collibra platform.",
+      "Collibra for iOS - Maintenance and development of existing Swift 5 application for iOS and iPadOS.",
+      "Collibra Extension for Tableau - Development of a web extension that allows the integration of metadata from the Collibra Platform directly into Tableau Dashboards."
+    ],
+    "celfocus": [
+      "Development of mobile apps for Android OS.",
+      "Development of back-end applications using Java EE, deployed using Docker on AWS EC2.",
+      "Development of front-end apps using JSF, or React.",
+      "Development of Skills for the Amazon Alexa service."
+    ],
+    "premiumMinds": "Development of the invoice library Billy for applications providing them with ability to create, manage, and store billing artifacts such as invoices and credit notes. It also supports the export of the persisted data in PDF and SAF-T formats."
+  },
   "sections": {
     "experience": "Experience",
     "projects": "GitHub Projects"

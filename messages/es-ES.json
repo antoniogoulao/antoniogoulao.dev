@@ -13,6 +13,28 @@
     "blogCta": "Leer mi blog",
     "rideAndListen": "Ride & Listen"
   },
+  "experience": {
+    "uphill": [
+      "Liber - Reescritura en React Native de la aplicación multiplataforma para Android, iOS e iPadOS.",
+      "Lanyard - Desarrollo de un RPA que navega y extrae datos de una aplicación web.",
+      "UpHill - Mantenimiento y desarrollo de la interfaz de la plataforma utilizada por médicos y enfermeros para gestionar trayectos de pacientes."
+    ],
+    "collibra": [
+      "Collibra for Mobile - Desarrollo de una nueva aplicación multiplataforma para Android, iOS e iPadOS.",
+      "Data Marketplace - Desarrollo de un nuevo portal que permite a los usuarios encontrar, comprender y colaborar con datos de confianza de forma intuitiva.",
+      "Collibra for Desktop - Desarrollo de una nueva aplicación multiplataforma para MacOS, Windows y Linux.",
+      "Collibra Chrome Extension - Desarrollo de una nueva extensión para navegadores basados en Chromium que se integra con la plataforma Collibra.",
+      "Collibra for iOS - Mantenimiento y desarrollo de la aplicación Swift 5 existente para iOS e iPadOS.",
+      "Collibra Extension for Tableau - Desarrollo de una extensión web que permite la integración de metadatos de la Plataforma Collibra directamente en los Dashboards de Tableau."
+    ],
+    "celfocus": [
+      "Desarrollo de aplicaciones móviles para Android OS.",
+      "Desarrollo de aplicaciones back-end con Java EE, desplegadas con Docker en AWS EC2.",
+      "Desarrollo de aplicaciones front-end con JSF o React.",
+      "Desarrollo de Skills para el servicio Amazon Alexa."
+    ],
+    "premiumMinds": "Desarrollo de la librería de facturación Billy para aplicaciones, proporcionándoles la capacidad de crear, gestionar y almacenar artefactos de facturación como facturas y notas de crédito. También soporta la exportación de los datos persistidos en formatos PDF y SAF-T."
+  },
   "sections": {
     "experience": "Experiencia",
     "projects": "Proyectos GitHub"
