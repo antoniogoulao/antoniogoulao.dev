@@ -2,6 +2,7 @@ import {setRequestLocale} from 'next-intl/server';
 import {Hero} from '@/components/home/Hero';
 import {Experience} from '@/components/home/Experience';
 import {Projects} from '@/components/home/Projects';
+import {Contact} from '@/components/home/Contact';
 import {fetchGitHubRepos} from '@/lib/github';
 
 export default async function HomePage({
@@ -19,6 +20,7 @@ export default async function HomePage({
       <Hero locale={locale} />
       <Experience />
       <Projects repos={repos} />
+      <Contact />
     </>
   );
 }
