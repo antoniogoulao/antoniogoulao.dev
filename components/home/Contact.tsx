@@ -27,39 +27,45 @@ export function Contact() {
       <form onSubmit={handleSubmit}>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
           <div className="flex flex-col gap-1.5">
-            <label className="text-xs uppercase tracking-widest text-muted font-sans">
+            <label htmlFor="contact-name" className="text-xs uppercase tracking-widest text-muted font-sans">
               {t('name')}
             </label>
             <input
+              id="contact-name"
               type="text"
               placeholder={t('namePlaceholder')}
               value={name}
               onChange={e => setName(e.target.value)}
+              required
               className="bg-surface border border-surface rounded px-3 py-2.5 text-sm text-foreground placeholder:text-muted font-sans focus:outline-none focus:border-primary transition-colors"
             />
           </div>
           <div className="flex flex-col gap-1.5">
-            <label className="text-xs uppercase tracking-widest text-muted font-sans">
+            <label htmlFor="contact-email" className="text-xs uppercase tracking-widest text-muted font-sans">
               {t('email')}
             </label>
             <input
+              id="contact-email"
               type="email"
               placeholder={t('emailPlaceholder')}
               value={email}
               onChange={e => setEmail(e.target.value)}
+              required
               className="bg-surface border border-surface rounded px-3 py-2.5 text-sm text-foreground placeholder:text-muted font-sans focus:outline-none focus:border-primary transition-colors"
             />
           </div>
         </div>
         <div className="flex flex-col gap-1.5 mb-6">
-          <label className="text-xs uppercase tracking-widest text-muted font-sans">
+          <label htmlFor="contact-message" className="text-xs uppercase tracking-widest text-muted font-sans">
             {t('message')}
           </label>
           <textarea
+            id="contact-message"
             rows={5}
             placeholder={t('messagePlaceholder')}
             value={message}
             onChange={e => setMessage(e.target.value)}
+            required
             className="bg-surface border border-surface rounded px-3 py-2.5 text-sm text-foreground placeholder:text-muted font-sans focus:outline-none focus:border-primary transition-colors resize-none"
           />
         </div>
