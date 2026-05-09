@@ -39,7 +39,7 @@ export function Nav({locale}: {locale: string}) {
       {threshold: [0, 0.25, 0.5, 0.75, 1]},
     );
 
-    ['about', 'experience', 'projects'].forEach(id => {
+    ['about', 'experience', 'projects', 'contact'].forEach(id => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
@@ -83,6 +83,10 @@ export function Nav({locale}: {locale: string}) {
             {t('books')}
             <ActiveDot active={booksActive} />
           </Link>
+          <a href={`/${locale}#contact`} className="relative inline-flex flex-col items-center hover:text-foreground transition-colors">
+            {t('contact')}
+            <ActiveDot active={isHome && activeSection === 'contact'} />
+          </a>
         </div>
 
         <div className="flex items-center gap-3">

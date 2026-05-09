@@ -72,4 +72,10 @@ describe('Nav active dot', () => {
     const dot = booksLink.querySelector('span');
     expect(dot).toHaveClass('opacity-0');
   });
+
+  it('renders the contact nav link', () => {
+    mockPathname.mockReturnValue('/en-GB');
+    render(<Nav locale="en-GB" />);
+    expect(screen.getByRole('link', {name: 'contact'})).toBeInTheDocument();
+  });
 });
