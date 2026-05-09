@@ -4,7 +4,8 @@
     "work": "Trabalho",
     "projects": "Projetos",
     "blog": "Blog",
-    "books": "Livros"
+    "books": "Livros",
+    "contact": "Contacto"
   },
   "hero": {
     "greeting": "Olá, sou o",
@@ -15,7 +16,8 @@
   },
   "sections": {
     "experience": "Experiência",
-    "projects": "Projetos GitHub"
+    "projects": "Projetos GitHub",
+    "contact": "Contacto"
   },
   "blog": {
     "heading": "Escrita",
@@ -26,5 +28,15 @@
   "books": {
     "heading": "Lista de Leituras",
     "subtitle": "Livros que li, agrupados por ano."
+  },
+  "contact": {
+    "intro": "Tem algo a dizer? Envie-me uma mensagem — respondo a tudo.",
+    "name": "Nome",
+    "namePlaceholder": "O seu nome",
+    "email": "Email",
+    "emailPlaceholder": "o-seu@email.com",
+    "message": "Mensagem",
+    "messagePlaceholder": "O que tem em mente?",
+    "send": "Enviar mensagem"
   }
 }
