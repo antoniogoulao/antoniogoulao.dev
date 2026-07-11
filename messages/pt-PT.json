@@ -51,8 +51,14 @@
     "about": "Sobre",
     "experience": "Experiência",
     "skills": "Competências",
-    "projects": "Projetos GitHub",
+    "projects": "Projetos",
     "contact": "Contacto"
+  },
+  "projects": {
+    "rideAndListen": "Rádio local para ouvir enquanto se percorre as cidades portuguesas. Criado e mantido desde 2021.",
+    "lanyard": "Um serviço de RPA que navega numa aplicação web de terceiros e extrai dados. Construído na UpHill com Node.js, Playwright e TypeScript.",
+    "thisSite": "Este site — um site Next.js exportado estaticamente, desenhado e mantido com Claude Code como parte do meu fluxo de trabalho diário assistido por IA.",
+    "moreOnGitHub": "Mais no GitHub"
   },
   "skills": {
     "mobile": "Mobile",
