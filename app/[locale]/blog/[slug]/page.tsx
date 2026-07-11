@@ -4,7 +4,7 @@ import remarkGfm from 'remark-gfm';
 import Link from 'next/link';
 import {getPostContent, getPostMeta, getPostSlugs} from '@/lib/mdx';
 import {routing} from '@/i18n/routing';
-import {localeAlternates} from '@/lib/seo';
+import {localeAlternates, SITE_URL} from '@/lib/seo';
 
 export async function generateMetadata({
   params,
@@ -43,8 +43,23 @@ export default async function BlogPostPage({
   const format = await getFormatter();
   const {meta, content} = getPostContent(slug, locale);
 
+  const postLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: meta.title,
+    datePublished: meta.date,
+    description: meta.excerpt,
+    inLanguage: locale,
+    author: {'@type': 'Person', name: 'António Goulão', url: SITE_URL},
+    mainEntityOfPage: `${SITE_URL}/${locale}/blog/${slug}/`,
+  };
+
   return (
     <div className="px-6 py-12 max-w-2xl mx-auto">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(postLd)}}
+      />
       <Link
         href={`/${locale}/blog`}
         className="text-xs uppercase tracking-wide text-muted hover:text-foreground transition-colors mb-10 block font-sans"

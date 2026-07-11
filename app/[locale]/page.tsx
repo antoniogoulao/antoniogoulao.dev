@@ -6,7 +6,7 @@ import {Skills} from '@/components/home/Skills';
 import {Projects} from '@/components/home/Projects';
 import {Contact} from '@/components/home/Contact';
 import {fetchGitHubRepos} from '@/lib/github';
-import {localeAlternates} from '@/lib/seo';
+import {localeAlternates, personLd} from '@/lib/seo';
 
 export async function generateMetadata({
   params,
@@ -29,6 +29,10 @@ export default async function HomePage({
 
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(personLd)}}
+      />
       <Hero locale={locale} />
       <About />
       <Experience />
