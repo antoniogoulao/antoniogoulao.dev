@@ -62,6 +62,13 @@ export function Hero({locale}: {locale: string}) {
       </motion.h1>
 
       <motion.p
+        {...fadeUp(0.25)}
+        className="text-lg md:text-xl text-foreground mb-2 font-sans"
+      >
+        {t('role')}
+      </motion.p>
+
+      <motion.p
         {...fadeUp(0.3)}
         className="text-xs uppercase tracking-widest text-secondary mb-8 font-sans"
       >
@@ -70,15 +77,22 @@ export function Hero({locale}: {locale: string}) {
 
       <motion.p
         {...fadeUp(0.4)}
-        className="text-muted leading-relaxed max-w-md mb-10 font-sans"
+        className="text-muted leading-relaxed max-w-xl mb-10 font-sans"
       >
         {t('bio')}
       </motion.p>
 
-      <motion.div {...fadeUp(0.5)} className="flex flex-wrap gap-4">
+      <motion.div {...fadeUp(0.5)} className="flex flex-wrap items-center gap-4">
+        <a
+          href="/CV_Antonio_Goulao_FE.pdf"
+          download
+          className="px-5 py-2.5 bg-primary text-background text-xs font-bold uppercase tracking-wide rounded hover:bg-primary/90 transition-colors font-sans"
+        >
+          {t('downloadCv')}
+        </a>
         <Link
           href={`/${locale}/blog`}
-          className="px-5 py-2.5 bg-primary text-background text-xs font-bold uppercase tracking-wide rounded hover:bg-primary/90 transition-colors font-sans"
+          className="px-5 py-2.5 border border-muted text-muted text-xs uppercase tracking-wide rounded hover:border-foreground hover:text-foreground transition-colors font-sans"
         >
           {t('blogCta')}
         </Link>
@@ -89,6 +103,22 @@ export function Hero({locale}: {locale: string}) {
           className="px-5 py-2.5 border border-muted text-muted text-xs uppercase tracking-wide rounded hover:border-foreground hover:text-foreground transition-colors font-sans"
         >
           {t('rideAndListen')} →
+        </a>
+        <a
+          href="https://github.com/antoniogoulao"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs uppercase tracking-wide text-muted hover:text-foreground transition-colors font-sans"
+        >
+          GitHub
+        </a>
+        <a
+          href="https://www.linkedin.com/in/antoniomgoulao/"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-xs uppercase tracking-wide text-muted hover:text-foreground transition-colors font-sans"
+        >
+          LinkedIn
         </a>
       </motion.div>
     </section>

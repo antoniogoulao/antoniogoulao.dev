@@ -9,8 +9,10 @@
   },
   "hero": {
     "greeting": "Olá, sou o",
+    "role": "Programador Sénior Mobile & Frontend",
     "tagline": "Engenheiro Mobile · Motociclista · Leitor",
-    "bio": "A desenvolver aplicações mobile e web na Uphill Health. Apaixonado por sistemas limpos, longas viagens de mota e bons livros.",
+    "bio": "Mais de 10 anos a construir software — os últimos 8 focados em produtos mobile-first com React Native e o ecossistema React/TypeScript. Liderei duas aplicações React Native de raiz, de ponta a ponta — da arquitetura aos pipelines de publicação na App Store e no Google Play. Atualmente na UpHill, a automatizar percursos de cuidados clínicos.",
+    "downloadCv": "Descarregar CV (PDF)",
     "blogCta": "Ler o blog",
     "rideAndListen": "Ride & Listen"
   },
