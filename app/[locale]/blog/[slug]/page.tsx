@@ -2,8 +2,24 @@ import {setRequestLocale, getTranslations, getFormatter} from 'next-intl/server'
 import {MDXRemote} from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
 import Link from 'next/link';
-import {getPostContent, getPostSlugs} from '@/lib/mdx';
+import {getPostContent, getPostMeta, getPostSlugs} from '@/lib/mdx';
 import {routing} from '@/i18n/routing';
+import {localeAlternates, SITE_URL} from '@/lib/seo';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{locale: string; slug: string}>;
+}) {
+  const {locale, slug} = await params;
+  const meta = getPostMeta(slug, locale);
+  const localesWithPost = routing.locales.filter(l => getPostSlugs(l).includes(slug));
+  return {
+    title: meta.title,
+    description: meta.excerpt,
+    alternates: localeAlternates(`/blog/${slug}`, locale, localesWithPost),
+  };
+}
 
 export async function generateStaticParams() {
   const params: {locale: string; slug: string}[] = [];
@@ -27,8 +43,23 @@ export default async function BlogPostPage({
   const format = await getFormatter();
   const {meta, content} = getPostContent(slug, locale);
 
+  const postLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BlogPosting',
+    headline: meta.title,
+    datePublished: meta.date,
+    description: meta.excerpt,
+    inLanguage: locale,
+    author: {'@type': 'Person', name: 'António Goulão', url: SITE_URL},
+    mainEntityOfPage: `${SITE_URL}/${locale}/blog/${slug}/`,
+  };
+
   return (
     <div className="px-6 py-12 max-w-2xl mx-auto">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{__html: JSON.stringify(postLd)}}
+      />
       <Link
         href={`/${locale}/blog`}
         className="text-xs uppercase tracking-wide text-muted hover:text-foreground transition-colors mb-10 block font-sans"

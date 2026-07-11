@@ -1,7 +1,12 @@
 {
+  "meta": {
+    "siteDescription": "Desarrollador Sénior Mobile & Frontend en Lisboa — más de 10 años de experiencia, los últimos 8 en productos mobile-first con React Native y el ecosistema React/TypeScript. Actualmente en UpHill."
+  },
   "nav": {
+    "skipToContent": "Saltar al contenido",
     "about": "Sobre mí",
     "work": "Trabajo",
+    "skills": "Habilidades",
     "projects": "Proyectos",
     "blog": "Blog",
     "books": "Libros",
@@ -9,37 +14,60 @@
   },
   "hero": {
     "greeting": "Hola, soy",
+    "role": "Desarrollador Sénior Mobile & Frontend",
     "tagline": "Ingeniero Mobile · Motorista · Lector",
-    "bio": "Desarrollando aplicaciones mobile y web en Uphill Health. Apasionado por sistemas limpios, largas rutas en moto y buenos libros.",
+    "bio": "Más de 10 años construyendo software — los últimos 8 centrados en productos mobile-first con React Native y el ecosistema React/TypeScript. He liderado dos aplicaciones React Native desde cero, de principio a fin: de la arquitectura a los pipelines de publicación en App Store y Google Play. Actualmente en UpHill, automatizando trayectos de atención clínica.",
+    "downloadCv": "Descargar CV (PDF)",
     "blogCta": "Leer mi blog",
     "rideAndListen": "Ride & Listen"
   },
+  "about": {
+    "p1": "Soy desarrollador sénior de mobile y frontend — mobile primero — con más de 10 años de experiencia, los últimos 8 construyendo productos mobile-first con React Native y el ecosistema React/TypeScript.",
+    "p2": "He lanzado dos aplicaciones React Native desde cero, de principio a fin: Liber en UpHill y Collibra for Mobile — responsable de todo, desde la arquitectura hasta los pipelines de publicación en App Store y Google Play.",
+    "p3": "Más allá del mobile, he construido para web, escritorio y extensiones de navegador — React, Electron, iOS nativo en Swift 5 — y trabajo con un flujo asistido por IA, con agentes como Claude Code y Codex. Este mismo sitio está construido y mantenido con Claude Code."
+  },
   "experience": {
+    "present": "Actualidad",
+    "educationLabel": "Formación",
+    "education": "Máster y Grado en Ingeniería Informática y de Computadores — Instituto Superior Técnico, Lisboa",
     "uphill": [
-      "Liber - Reescritura en React Native de la aplicación multiplataforma para Android, iOS e iPadOS.",
-      "Lanyard - Desarrollo de un RPA que navega y extrae datos de una aplicación web.",
-      "UpHill - Mantenimiento y desarrollo de la interfaz de la plataforma utilizada por médicos y enfermeros para gestionar trayectos de pacientes."
+      "Lideré la reescritura completa en React Native de Liber, la aplicación multiplataforma de UpHill (Android, iOS, iPadOS), sobre una arquitectura basada en Expo — estado y datos con Zustand, React Query y MMKV; calidad con Jest y Maestro; integraciones con Stripe, Sumsub, Sendbird, Algolia, Intercom, Firebase y Sentry.",
+      "Construí Lanyard, un servicio de RPA que navega y extrae datos de una aplicación web de terceros (Node.js, Playwright, TypeScript).",
+      "Mantengo y hago evolucionar la interfaz de la plataforma utilizada por médicos y enfermeros para gestionar trayectos de pacientes.",
+      "Integré agentes de programación con IA (Claude Code, Codex) en el flujo de trabajo diario — scaffolding, generación de tests y refactorizaciones a gran escala durante la reescritura de Liber."
     ],
     "collibra": [
-      "Collibra for Mobile - Desarrollo de una nueva aplicación multiplataforma para Android, iOS e iPadOS.",
-      "Data Marketplace - Desarrollo de un nuevo portal que permite a los usuarios encontrar, comprender y colaborar con datos de confianza de forma intuitiva.",
-      "Collibra for Desktop - Desarrollo de una nueva aplicación multiplataforma para MacOS, Windows y Linux.",
-      "Collibra Chrome Extension - Desarrollo de una nueva extensión para navegadores basados en Chromium que se integra con la plataforma Collibra.",
-      "Collibra for iOS - Mantenimiento y desarrollo de la aplicación Swift 5 existente para iOS e iPadOS.",
-      "Collibra Extension for Tableau - Desarrollo de una extensión web que permite la integración de metadatos de la Plataforma Collibra directamente en los Dashboards de Tableau."
+      "Lideré el desarrollo de Collibra for Mobile, una aplicación Expo/React Native construida desde cero para Android, iOS e iPadOS — de la arquitectura a los pipelines de publicación en las tiendas.",
+      "Construí el portal Data Marketplace, que ayuda a los usuarios a encontrar, comprender y colaborar con datos de confianza (React, GraphQL, React Query, MUI).",
+      "Lancé Collibra for Desktop, una aplicación Electron multiplataforma para macOS, Windows y Linux.",
+      "Mantuve e hice evolucionar la aplicación nativa en Swift 5 para iOS e iPadOS.",
+      "Construí extensiones de navegador que integran la plataforma Collibra en navegadores Chromium y en dashboards de Tableau."
     ],
     "celfocus": [
-      "Desarrollo de aplicaciones móviles para Android OS.",
-      "Desarrollo de aplicaciones back-end con Java EE, desplegadas con Docker en AWS EC2.",
-      "Desarrollo de aplicaciones front-end con JSF o React.",
-      "Desarrollo de Skills para el servicio Amazon Alexa."
+      "Desarrollé aplicaciones móviles para Android.",
+      "Desarrollé servicios back-end en Java EE, desplegados con Docker en AWS EC2.",
+      "Construí aplicaciones front-end con JSF y React.",
+      "Creé Skills para el servicio Amazon Alexa."
     ],
-    "premiumMinds": "Desarrollo de la librería de facturación Billy para aplicaciones, proporcionándoles la capacidad de crear, gestionar y almacenar artefactos de facturación como facturas y notas de crédito. También soporta la exportación de los datos persistidos en formatos PDF y SAF-T."
+    "premiumMinds": "Construí Billy, una librería de facturación que permite a las aplicaciones crear, gestionar y almacenar artefactos de facturación, como facturas y notas de crédito, con exportación a los formatos PDF y SAF-T."
   },
   "sections": {
+    "about": "Sobre mí",
     "experience": "Experiencia",
-    "projects": "Proyectos GitHub",
+    "skills": "Habilidades",
+    "projects": "Proyectos",
     "contact": "Contacto"
+  },
+  "projects": {
+    "rideAndListen": "Radio local para escuchar mientras recorres las ciudades portuguesas. Creado y mantenido desde 2021.",
+    "lanyard": "Un servicio de RPA que navega por una aplicación web de terceros y extrae datos. Construido en UpHill con Node.js, Playwright y TypeScript.",
+    "thisSite": "Este sitio — un sitio Next.js exportado estáticamente, diseñado y mantenido con Claude Code como parte de mi flujo de trabajo diario asistido por IA.",
+    "moreOnGitHub": "Más en GitHub"
+  },
+  "skills": {
+    "mobile": "Mobile",
+    "frontend": "Frontend",
+    "tooling": "Testing y herramientas"
   },
   "blog": {
     "heading": "Escritura",

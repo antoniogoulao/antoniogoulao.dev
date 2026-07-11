@@ -1,6 +1,21 @@
 import {setRequestLocale, getTranslations} from 'next-intl/server';
 import {books} from '@/content/books';
 import {SectionDivider} from '@/components/SectionDivider';
+import {localeAlternates} from '@/lib/seo';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{locale: string}>;
+}) {
+  const {locale} = await params;
+  const t = await getTranslations({locale, namespace: 'books'});
+  return {
+    title: t('heading'),
+    description: t('subtitle'),
+    alternates: localeAlternates('/books', locale),
+  };
+}
 
 export default async function BooksPage({
   params,
@@ -22,7 +37,7 @@ export default async function BooksPage({
 
   return (
     <div className="px-6 py-12 max-w-4xl mx-auto">
-      <SectionDivider label={t('heading')} />
+      <SectionDivider label={t('heading')} as="span" />
       <h1 className="font-serif italic text-4xl md:text-5xl text-foreground mb-3">
         {t('heading')}
       </h1>

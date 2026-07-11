@@ -2,14 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Light mode — default */
+/* Light mode — default. Primary/secondary/muted darkened to pass WCAG AA
+   (4.5:1) for small text on the cream background. */
 :root {
   --color-background: 255 248 242;
   --color-surface: 240 232 224;
-  --color-primary: 217 72 15;
-  --color-secondary: 255 183 3;
+  --color-primary: 194 65 12;
+  --color-secondary: 161 98 7;
   --color-foreground: 43 33 24;
-  --color-muted: 122 106 90;
+  --color-muted: 110 95 80;
   --color-border: 43 33 24;
 }
 
@@ -22,6 +23,42 @@
   --color-foreground: 245 237 230;
   --color-muted: 184 169 154;
   --color-border: 245 237 230;
+}
+
+/* Entrance animations — only `from` keyframes so forwards-fill never
+   overrides hover transforms; pure CSS, so content shows without JS. */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+@keyframes fade-left {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+}
+
+.anim-fade-up {
+  animation: fade-up 0.5s ease-out both;
+}
+
+.anim-fade-left {
+  animation: fade-left 0.45s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-fade-up,
+  .anim-fade-left {
+    animation: none;
+  }
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--color-primary));
+  outline-offset: 2px;
 }
 
 html,

@@ -19,18 +19,6 @@ jest.mock('@/components/LanguageSwitcher', () => ({
   LanguageSwitcher: () => null,
 }));
 
-jest.mock('framer-motion', () => {
-  const React = require('react');
-  return {
-    motion: new Proxy({}, {
-      get(_: unknown, tag: string) {
-        return ({children, initial: _i, animate: _a, transition: _t, ...props}: {children?: React.ReactNode; initial?: unknown; animate?: unknown; transition?: unknown} & React.HTMLAttributes<HTMLElement>) =>
-          React.createElement(tag, props, children);
-      },
-    }),
-  };
-});
-
 beforeEach(() => {
   mockPathname.mockReturnValue('/en-GB');
   global.IntersectionObserver = jest.fn().mockImplementation(() => ({

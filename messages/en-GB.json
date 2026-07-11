@@ -1,7 +1,12 @@
 {
+  "meta": {
+    "siteDescription": "Senior Mobile & Frontend Developer in Lisbon — 10+ years of experience, the last 8 on mobile-first products with React Native and the React/TypeScript ecosystem. Currently at UpHill."
+  },
   "nav": {
+    "skipToContent": "Skip to content",
     "about": "About",
     "work": "Work",
+    "skills": "Skills",
     "projects": "Projects",
     "blog": "Blog",
     "books": "Books",
@@ -9,37 +14,60 @@
   },
   "hero": {
     "greeting": "Hello, I'm",
+    "role": "Senior Mobile & Frontend Developer",
     "tagline": "Mobile Engineer · Rider · Reader",
-    "bio": "Building mobile and web applications at Uphill Health. Passionate about clean systems, long rides on two wheels, and good books.",
+    "bio": "10+ years building software — the last 8 focused on mobile-first products with React Native and the React/TypeScript ecosystem. I've led two greenfield React Native apps end-to-end, from architecture to App Store and Google Play release pipelines. Currently at UpHill, automating clinical care journeys.",
+    "downloadCv": "Download CV (PDF)",
     "blogCta": "Read my blog",
     "rideAndListen": "Ride & Listen"
   },
+  "about": {
+    "p1": "I'm a senior mobile and frontend developer — mobile first — with over 10 years of experience, the last 8 building mobile-first products with React Native and the React/TypeScript ecosystem.",
+    "p2": "I've shipped two greenfield React Native apps end-to-end: Liber at UpHill and Collibra for Mobile — owning everything from architecture to App Store and Google Play release pipelines.",
+    "p3": "Beyond mobile I've built for the web, desktop and browser extensions — React, Electron, native iOS in Swift 5 — and I run an AI-assisted workflow with coding agents like Claude Code and Codex. This site itself is built and maintained with Claude Code."
+  },
   "experience": {
+    "present": "Present",
+    "educationLabel": "Education",
+    "education": "MSc & BSc in Information Systems and Computer Engineering — Instituto Superior Técnico, Lisbon",
     "uphill": [
-      "Liber - Rewrite in React Native of the multiplatform application for Android, iOS and iPadOS.",
-      "Lanyard - Development of an RPA that navigates and extracts data from a web app.",
-      "UpHill - Maintenance and development of the platform interface used by doctors and nurses to manage patient journeys."
+      "Led the full React Native rewrite of Liber, UpHill's multiplatform app (Android, iOS, iPadOS), on an Expo-based architecture — state and data with Zustand, React Query and MMKV; quality with Jest and Maestro; integrations with Stripe, Sumsub, Sendbird, Algolia, Intercom, Firebase and Sentry.",
+      "Built Lanyard, an RPA service that navigates and extracts data from a third-party web app (Node.js, Playwright, TypeScript).",
+      "Maintain and evolve the platform interface used by doctors and nurses to manage patient journeys.",
+      "Integrated AI coding agents (Claude Code, Codex) into the daily workflow — scaffolding, test generation and large-scale refactors during the Liber rewrite."
     ],
     "collibra": [
-      "Collibra for Mobile - Development of a new multiplatform application for Android, iOS and iPadOS.",
-      "Data Marketplace - Development of a new portal that ensures users can intuitively find, understand, and collaborate with trusted data.",
-      "Collibra for Desktop - Development of a new multiplatform application for MacOS, Windows, and Linux.",
-      "Collibra Chrome Extension - Development of a new extension to run on Chromium based browsers that integrates with the Collibra platform.",
-      "Collibra for iOS - Maintenance and development of existing Swift 5 application for iOS and iPadOS.",
-      "Collibra Extension for Tableau - Development of a web extension that allows the integration of metadata from the Collibra Platform directly into Tableau Dashboards."
+      "Led development of Collibra for Mobile, a greenfield Expo/React Native app for Android, iOS and iPadOS — from architecture to store release pipelines.",
+      "Built the Data Marketplace portal, helping users find, understand and collaborate with trusted data (React, GraphQL, React Query, MUI).",
+      "Shipped Collibra for Desktop, a multiplatform Electron app for macOS, Windows and Linux.",
+      "Maintained and evolved the native Swift 5 app for iOS and iPadOS.",
+      "Built browser extensions integrating the Collibra platform into Chromium browsers and Tableau dashboards."
     ],
     "celfocus": [
-      "Development of mobile apps for Android OS.",
-      "Development of back-end applications using Java EE, deployed using Docker on AWS EC2.",
-      "Development of front-end apps using JSF, or React.",
-      "Development of Skills for the Amazon Alexa service."
+      "Built mobile apps for Android.",
+      "Developed Java EE back-end services, deployed with Docker on AWS EC2.",
+      "Built front-end apps with JSF and React.",
+      "Created Skills for the Amazon Alexa service."
     ],
-    "premiumMinds": "Development of the invoice library Billy for applications providing them with ability to create, manage, and store billing artifacts such as invoices and credit notes. It also supports the export of the persisted data in PDF and SAF-T formats."
+    "premiumMinds": "Built Billy, an invoicing library that lets applications create, manage and store billing artifacts such as invoices and credit notes, with export to PDF and SAF-T formats."
   },
   "sections": {
+    "about": "About",
     "experience": "Experience",
-    "projects": "GitHub Projects",
+    "skills": "Skills",
+    "projects": "Projects",
     "contact": "Contact"
+  },
+  "projects": {
+    "rideAndListen": "Listen to local radio while riding through Portuguese cities. Built and maintained since 2021.",
+    "lanyard": "An RPA service that navigates a third-party web app and extracts data from it. Built at UpHill with Node.js, Playwright and TypeScript.",
+    "thisSite": "This site — a statically exported Next.js site, designed and maintained with Claude Code as part of my daily AI-assisted workflow.",
+    "moreOnGitHub": "More on GitHub"
+  },
+  "skills": {
+    "mobile": "Mobile",
+    "frontend": "Frontend",
+    "tooling": "Testing & tooling"
   },
   "blog": {
     "heading": "Writing",
