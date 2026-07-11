@@ -39,7 +39,7 @@ export function Nav({locale}: {locale: string}) {
       {threshold: [0, 0.25, 0.5, 0.75, 1]},
     );
 
-    ['about', 'experience', 'projects', 'contact'].forEach(id => {
+    ['about', 'experience', 'skills', 'projects', 'contact'].forEach(id => {
       const el = document.getElementById(id);
       if (el) observer.observe(el);
     });
@@ -70,6 +70,10 @@ export function Nav({locale}: {locale: string}) {
           <a href={`/${locale}#experience`} className="relative inline-flex flex-col items-center hover:text-foreground transition-colors">
             {t('work')}
             <ActiveDot active={isHome && activeSection === 'experience'} />
+          </a>
+          <a href={`/${locale}#skills`} className="relative inline-flex flex-col items-center hover:text-foreground transition-colors">
+            {t('skills')}
+            <ActiveDot active={isHome && activeSection === 'skills'} />
           </a>
           <a href={`/${locale}#projects`} className="relative inline-flex flex-col items-center hover:text-foreground transition-colors">
             {t('projects')}

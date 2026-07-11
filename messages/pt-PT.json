@@ -2,6 +2,7 @@
   "nav": {
     "about": "Sobre",
     "work": "Trabalho",
+    "skills": "Competências",
     "projects": "Projetos",
     "blog": "Blog",
     "books": "Livros",
@@ -49,8 +50,14 @@
   "sections": {
     "about": "Sobre",
     "experience": "Experiência",
+    "skills": "Competências",
     "projects": "Projetos GitHub",
     "contact": "Contacto"
+  },
+  "skills": {
+    "mobile": "Mobile",
+    "frontend": "Frontend",
+    "tooling": "Testes & ferramentas"
   },
   "blog": {
     "heading": "Escrita",
