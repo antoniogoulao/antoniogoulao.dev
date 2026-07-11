@@ -44,6 +44,7 @@ export function Hero({locale}: {locale: string}) {
       ref={sectionRef}
       id="about"
       onMouseMove={handleMouseMove}
+      onMouseLeave={() => setPos(DEFAULT_POS)}
       className="relative px-6 py-24 max-w-4xl mx-auto overflow-hidden"
     >
       <motion.p {...fadeUp(0.1)} className="text-xs uppercase tracking-widest text-muted mb-4 font-sans">

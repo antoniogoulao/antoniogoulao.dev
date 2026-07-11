@@ -13,6 +13,7 @@ const config: Config = {
     '**/__tests__/**/*.{ts,tsx}',
     '**/*.{test,spec}.{ts,tsx}',
   ],
+  testPathIgnorePatterns: ['/node_modules/', '/.worktrees/'],
   transformIgnorePatterns: [
     '/node_modules/(?!(framer-motion|next-mdx-remote|remark-gfm)/)',
   ],
