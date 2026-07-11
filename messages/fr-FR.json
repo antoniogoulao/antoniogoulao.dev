@@ -22,26 +22,29 @@
     "p3": "Au-delà du mobile, j'ai développé pour le web, le desktop et les extensions de navigateur — React, Electron, iOS natif en Swift 5 — et je travaille avec un flux assisté par IA, avec des agents comme Claude Code et Codex. Ce site lui-même est construit et maintenu avec Claude Code."
   },
   "experience": {
+    "present": "Aujourd'hui",
+    "educationLabel": "Formation",
+    "education": "Master et Licence en Ingénierie Informatique et Systèmes d'Information — Instituto Superior Técnico, Lisbonne",
     "uphill": [
-      "Liber - Réécriture en React Native de l'application multiplateforme pour Android, iOS et iPadOS.",
-      "Lanyard - Développement d'un RPA qui navigue et extrait des données d'une application web.",
-      "UpHill - Maintenance et développement de l'interface de la plateforme utilisée par les médecins et infirmiers pour gérer les parcours patients."
+      "J'ai mené la réécriture complète en React Native de Liber, l'application multiplateforme d'UpHill (Android, iOS, iPadOS), sur une architecture basée sur Expo — état et données avec Zustand, React Query et MMKV ; qualité avec Jest et Maestro ; intégrations avec Stripe, Sumsub, Sendbird, Algolia, Intercom, Firebase et Sentry.",
+      "J'ai construit Lanyard, un service RPA qui navigue et extrait des données d'une application web tierce (Node.js, Playwright, TypeScript).",
+      "Je maintiens et fais évoluer l'interface de la plateforme utilisée par les médecins et infirmiers pour gérer les parcours patients.",
+      "J'ai intégré des agents de codage IA (Claude Code, Codex) dans le flux de travail quotidien — scaffolding, génération de tests et refactorisations à grande échelle pendant la réécriture de Liber."
     ],
     "collibra": [
-      "Collibra for Mobile - Développement d'une nouvelle application multiplateforme pour Android, iOS et iPadOS.",
-      "Data Marketplace - Développement d'un nouveau portail permettant aux utilisateurs de trouver, comprendre et collaborer avec des données fiables de manière intuitive.",
-      "Collibra for Desktop - Développement d'une nouvelle application multiplateforme pour MacOS, Windows et Linux.",
-      "Collibra Chrome Extension - Développement d'une nouvelle extension pour les navigateurs basés sur Chromium s'intégrant à la plateforme Collibra.",
-      "Collibra for iOS - Maintenance et développement de l'application Swift 5 existante pour iOS et iPadOS.",
-      "Collibra Extension for Tableau - Développement d'une extension web permettant l'intégration des métadonnées de la Plateforme Collibra directement dans les tableaux de bord Tableau."
+      "J'ai mené le développement de Collibra for Mobile, une application Expo/React Native créée de zéro pour Android, iOS et iPadOS — de l'architecture aux pipelines de publication sur les stores.",
+      "J'ai construit le portail Data Marketplace, qui aide les utilisateurs à trouver, comprendre et exploiter des données fiables (React, GraphQL, React Query, MUI).",
+      "J'ai livré Collibra for Desktop, une application Electron multiplateforme pour macOS, Windows et Linux.",
+      "J'ai maintenu et fait évoluer l'application native en Swift 5 pour iOS et iPadOS.",
+      "J'ai construit des extensions de navigateur intégrant la plateforme Collibra aux navigateurs Chromium et aux tableaux de bord Tableau."
     ],
     "celfocus": [
-      "Développement d'applications mobiles pour Android OS.",
-      "Développement d'applications back-end avec Java EE, déployées avec Docker sur AWS EC2.",
-      "Développement d'applications front-end avec JSF ou React.",
-      "Développement de Skills pour le service Amazon Alexa."
+      "J'ai développé des applications mobiles pour Android.",
+      "J'ai développé des services back-end en Java EE, déployés avec Docker sur AWS EC2.",
+      "J'ai construit des applications front-end avec JSF et React.",
+      "J'ai créé des Skills pour le service Amazon Alexa."
     ],
-    "premiumMinds": "Développement de la bibliothèque de facturation Billy pour les applications, leur fournissant la capacité de créer, gérer et stocker des artefacts de facturation tels que des factures et des avoirs. Elle prend également en charge l'export des données persistées aux formats PDF et SAF-T."
+    "premiumMinds": "J'ai construit Billy, une bibliothèque de facturation qui permet aux applications de créer, gérer et stocker des artefacts de facturation, tels que factures et avoirs, avec export aux formats PDF et SAF-T."
   },
   "sections": {
     "about": "À propos",

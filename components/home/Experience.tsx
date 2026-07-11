@@ -27,7 +27,9 @@ function EntryRow({entry, index, tExp}: {entry: ExperienceEntry; index: number; 
       <div className="pb-8">
         <p className="font-semibold text-foreground font-sans">{entry.title}</p>
         <p className="text-secondary text-sm font-sans">{entry.company}</p>
-        <p className="text-muted text-xs mt-0.5 mb-2 font-sans">{entry.period}</p>
+        <p className="text-muted text-xs mt-0.5 mb-2 font-sans">
+          {entry.current ? `${entry.period} — ${tExp('present')}` : entry.period}
+        </p>
         {Array.isArray(description) ? (
           <ul className="list-disc list-inside text-muted text-sm leading-relaxed font-sans space-y-1">
             {description.map((item, i) => (
@@ -36,6 +38,18 @@ function EntryRow({entry, index, tExp}: {entry: ExperienceEntry; index: number; 
           </ul>
         ) : (
           <p className="text-muted text-sm leading-relaxed font-sans">{description}</p>
+        )}
+        {entry.tags && (
+          <div className="flex flex-wrap gap-1.5 mt-3">
+            {entry.tags.map(tag => (
+              <span
+                key={tag}
+                className="text-xs text-muted bg-surface rounded px-2 py-0.5 font-sans"
+              >
+                {tag}
+              </span>
+            ))}
+          </div>
         )}
       </div>
     </motion.div>
@@ -53,6 +67,12 @@ export function Experience() {
         {experience.map((entry, i) => (
           <EntryRow key={entry.key} entry={entry} index={i} tExp={tExp} />
         ))}
+      </div>
+      <div className="mt-4 pt-6 border-t border-surface">
+        <p className="text-xs uppercase tracking-widest text-muted mb-1 font-sans">
+          {tExp('educationLabel')}
+        </p>
+        <p className="text-foreground text-sm font-sans">{tExp('education')}</p>
       </div>
     </section>
   );
