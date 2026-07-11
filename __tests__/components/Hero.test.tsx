@@ -27,13 +27,13 @@ jest.mock('framer-motion', () => {
 describe('Hero gradient', () => {
   it('applies a radial-gradient to the section background on render', () => {
     const {container} = render(<Hero locale="en-GB" />);
-    const section = container.querySelector('#about')!;
+    const section = container.querySelector('#hero')!;
     expect(section.getAttribute('style')).toContain('radial-gradient');
   });
 
   it('updates the gradient position on mouse move', () => {
     const {container} = render(<Hero locale="en-GB" />);
-    const section = container.querySelector('#about')! as HTMLElement;
+    const section = container.querySelector('#hero')! as HTMLElement;
 
     jest.spyOn(section, 'getBoundingClientRect').mockReturnValue({
       left: 0, top: 0, width: 1000, height: 500,
@@ -47,7 +47,7 @@ describe('Hero gradient', () => {
 
   it('resets to the default position on mouse leave', () => {
     const {container} = render(<Hero locale="en-GB" />);
-    const section = container.querySelector('#about')! as HTMLElement;
+    const section = container.querySelector('#hero')! as HTMLElement;
 
     jest.spyOn(section, 'getBoundingClientRect').mockReturnValue({
       left: 0, top: 0, width: 1000, height: 500,

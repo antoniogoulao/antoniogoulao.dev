@@ -42,7 +42,7 @@ export function Hero({locale}: {locale: string}) {
   return (
     <section
       ref={sectionRef}
-      id="about"
+      id="hero"
       onMouseMove={handleMouseMove}
       onMouseLeave={() => setPos(DEFAULT_POS)}
       className="relative px-6 py-24 max-w-4xl mx-auto overflow-hidden"

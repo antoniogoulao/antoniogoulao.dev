@@ -16,6 +16,11 @@
     "blogCta": "Ler o blog",
     "rideAndListen": "Ride & Listen"
   },
+  "about": {
+    "p1": "Sou programador sénior de mobile e frontend — mobile em primeiro lugar — com mais de 10 anos de experiência, os últimos 8 a construir produtos mobile-first com React Native e o ecossistema React/TypeScript.",
+    "p2": "Lancei duas aplicações React Native de raiz, de ponta a ponta: o Liber na UpHill e o Collibra for Mobile — responsável por tudo, da arquitetura aos pipelines de publicação na App Store e no Google Play.",
+    "p3": "Para além do mobile, já construí para web, desktop e extensões de browser — React, Electron, iOS nativo em Swift 5 — e trabalho com um fluxo assistido por IA, com agentes como o Claude Code e o Codex. Este próprio site é construído e mantido com Claude Code."
+  },
   "experience": {
     "uphill": [
       "Liber - Reescrita em React Native da aplicação multiplataforma para Android, iOS e iPadOS.",
@@ -39,6 +44,7 @@
     "premiumMinds": "Desenvolvimento da biblioteca de faturação Billy para aplicações, fornecendo-lhes a capacidade de criar, gerir e armazenar artefactos de faturação como faturas e notas de crédito. Suporta ainda a exportação dos dados persistidos em formatos PDF e SAF-T."
   },
   "sections": {
+    "about": "Sobre",
     "experience": "Experiência",
     "projects": "Projetos GitHub",
     "contact": "Contacto"

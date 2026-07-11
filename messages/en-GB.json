@@ -16,6 +16,11 @@
     "blogCta": "Read my blog",
     "rideAndListen": "Ride & Listen"
   },
+  "about": {
+    "p1": "I'm a senior mobile and frontend developer — mobile first — with over 10 years of experience, the last 8 building mobile-first products with React Native and the React/TypeScript ecosystem.",
+    "p2": "I've shipped two greenfield React Native apps end-to-end: Liber at UpHill and Collibra for Mobile — owning everything from architecture to App Store and Google Play release pipelines.",
+    "p3": "Beyond mobile I've built for the web, desktop and browser extensions — React, Electron, native iOS in Swift 5 — and I run an AI-assisted workflow with coding agents like Claude Code and Codex. This site itself is built and maintained with Claude Code."
+  },
   "experience": {
     "uphill": [
       "Liber - Rewrite in React Native of the multiplatform application for Android, iOS and iPadOS.",
@@ -39,6 +44,7 @@
     "premiumMinds": "Development of the invoice library Billy for applications providing them with ability to create, manage, and store billing artifacts such as invoices and credit notes. It also supports the export of the persisted data in PDF and SAF-T formats."
   },
   "sections": {
+    "about": "About",
     "experience": "Experience",
     "projects": "GitHub Projects",
     "contact": "Contact"
