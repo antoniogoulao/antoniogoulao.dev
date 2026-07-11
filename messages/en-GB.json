@@ -3,6 +3,7 @@
     "siteDescription": "Senior Mobile & Frontend Developer in Lisbon — 10+ years of experience, the last 8 on mobile-first products with React Native and the React/TypeScript ecosystem. Currently at UpHill."
   },
   "nav": {
+    "skipToContent": "Skip to content",
     "about": "About",
     "work": "Work",
     "skills": "Skills",

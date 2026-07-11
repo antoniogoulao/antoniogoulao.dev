@@ -61,14 +61,21 @@ export default async function LocaleLayout({
   const locale = localeParam as Locale;
   setRequestLocale(locale);
   const messages = await getMessages();
+  const t = await getTranslations('nav');
 
   return (
     <html lang={locale} suppressHydrationWarning>
       <body className={`${instrumentSerif.variable} ${spaceGrotesk.variable} font-sans`}>
+        <a
+          href="#main"
+          className="sr-only focus:not-sr-only focus:absolute focus:top-4 focus:left-4 focus:z-[60] focus:bg-background focus:px-3 focus:py-2 focus:rounded"
+        >
+          {t('skipToContent')}
+        </a>
         <ThemeProvider attribute="class" defaultTheme="dark">
           <NextIntlClientProvider locale={locale} messages={messages}>
             <Nav locale={locale} />
-            <main>{children}</main>
+            <main id="main">{children}</main>
             <Footer />
           </NextIntlClientProvider>
         </ThemeProvider>

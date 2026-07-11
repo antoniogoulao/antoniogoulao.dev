@@ -3,6 +3,7 @@
     "siteDescription": "Programador Sénior Mobile & Frontend em Lisboa — mais de 10 anos de experiência, os últimos 8 em produtos mobile-first com React Native e o ecossistema React/TypeScript. Atualmente na UpHill."
   },
   "nav": {
+    "skipToContent": "Saltar para o conteúdo",
     "about": "Sobre",
     "work": "Trabalho",
     "skills": "Competências",

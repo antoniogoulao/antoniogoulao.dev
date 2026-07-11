@@ -37,7 +37,7 @@ export default async function BooksPage({
 
   return (
     <div className="px-6 py-12 max-w-4xl mx-auto">
-      <SectionDivider label={t('heading')} />
+      <SectionDivider label={t('heading')} as="span" />
       <h1 className="font-serif italic text-4xl md:text-5xl text-foreground mb-3">
         {t('heading')}
       </h1>

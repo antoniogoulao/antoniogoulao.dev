@@ -2,14 +2,15 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Light mode — default */
+/* Light mode — default. Primary/secondary/muted darkened to pass WCAG AA
+   (4.5:1) for small text on the cream background. */
 :root {
   --color-background: 255 248 242;
   --color-surface: 240 232 224;
-  --color-primary: 217 72 15;
-  --color-secondary: 255 183 3;
+  --color-primary: 194 65 12;
+  --color-secondary: 161 98 7;
   --color-foreground: 43 33 24;
-  --color-muted: 122 106 90;
+  --color-muted: 110 95 80;
   --color-border: 43 33 24;
 }
 
@@ -53,6 +54,11 @@
   .anim-fade-left {
     animation: none;
   }
+}
+
+:focus-visible {
+  outline: 2px solid rgb(var(--color-primary));
+  outline-offset: 2px;
 }
 
 html,
