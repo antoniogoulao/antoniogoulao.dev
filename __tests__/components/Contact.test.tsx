@@ -41,7 +41,7 @@ describe('Contact form', () => {
 
     fireEvent.click(screen.getByRole('button', {name: 'send'}));
 
-    expect(window.location.href).toContain('mailto:antoniomgoulao@protonmail.com');
+    expect(window.location.href).toContain('mailto:antoniomgoulao@gmail.com');
     expect(window.location.href).toContain('Test%20User');
     expect(window.location.href).toContain('test%40example.com');
     expect(window.location.href).toContain('Hello%20world');
