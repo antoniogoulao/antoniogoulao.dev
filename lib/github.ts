@@ -13,9 +13,9 @@ export async function fetchGitHubRepos(
   limit = 6
 ): Promise<GitHubRepo[]> {
   try {
+    // Fetched once at build time (output: 'export' — no runtime revalidation).
     const res = await fetch(
-      `https://api.github.com/users/${username}/repos?per_page=100`,
-      {next: {revalidate: 3600}}
+      `https://api.github.com/users/${username}/repos?per_page=100`
     );
     if (!res.ok) return [];
     const data: unknown = await res.json();
