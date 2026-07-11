@@ -24,6 +24,37 @@
   --color-border: 245 237 230;
 }
 
+/* Entrance animations — only `from` keyframes so forwards-fill never
+   overrides hover transforms; pure CSS, so content shows without JS. */
+@keyframes fade-up {
+  from {
+    opacity: 0;
+    transform: translateY(16px);
+  }
+}
+
+@keyframes fade-left {
+  from {
+    opacity: 0;
+    transform: translateX(-16px);
+  }
+}
+
+.anim-fade-up {
+  animation: fade-up 0.5s ease-out both;
+}
+
+.anim-fade-left {
+  animation: fade-left 0.45s ease-out both;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .anim-fade-up,
+  .anim-fade-left {
+    animation: none;
+  }
+}
+
 html,
 body {
   transition: background-color 0.2s ease, color 0.2s ease;

@@ -1,14 +1,7 @@
 'use client';
 import Link from 'next/link';
 import {useRef, useState, useEffect} from 'react';
-import {motion} from 'framer-motion';
 import {useTranslations} from 'next-intl';
-
-const fadeUp = (delay: number) => ({
-  initial: {opacity: 0, y: 16},
-  animate: {opacity: 1, y: 0},
-  transition: {duration: 0.5, delay},
-});
 
 const DEFAULT_POS = {x: 85, y: 10};
 
@@ -47,42 +40,45 @@ export function Hero({locale}: {locale: string}) {
       onMouseLeave={() => setPos(DEFAULT_POS)}
       className="relative px-6 py-24 max-w-4xl mx-auto overflow-hidden"
     >
-      <motion.p {...fadeUp(0.1)} className="text-xs uppercase tracking-widest text-muted mb-4 font-sans">
+      <p
+        className="anim-fade-up text-xs uppercase tracking-widest text-muted mb-4 font-sans"
+        style={{animationDelay: '100ms'}}
+      >
         {t('greeting')}
-      </motion.p>
+      </p>
 
-      <motion.h1
-        {...fadeUp(0.2)}
-        className="font-serif text-6xl md:text-7xl leading-[1.0] mb-4 text-foreground"
+      <h1
+        className="anim-fade-up font-serif text-6xl md:text-7xl leading-[1.0] mb-4 text-foreground"
+        style={{animationDelay: '200ms'}}
       >
         António{' '}
         <em className="text-primary">
           Goulão
         </em>
-      </motion.h1>
+      </h1>
 
-      <motion.p
-        {...fadeUp(0.25)}
-        className="text-lg md:text-xl text-foreground mb-2 font-sans"
+      <p
+        className="anim-fade-up text-lg md:text-xl text-foreground mb-2 font-sans"
+        style={{animationDelay: '250ms'}}
       >
         {t('role')}
-      </motion.p>
+      </p>
 
-      <motion.p
-        {...fadeUp(0.3)}
-        className="text-xs uppercase tracking-widest text-secondary mb-8 font-sans"
+      <p
+        className="anim-fade-up text-xs uppercase tracking-widest text-secondary mb-8 font-sans"
+        style={{animationDelay: '300ms'}}
       >
         {t('tagline')}
-      </motion.p>
+      </p>
 
-      <motion.p
-        {...fadeUp(0.4)}
-        className="text-muted leading-relaxed max-w-xl mb-10 font-sans"
+      <p
+        className="anim-fade-up text-muted leading-relaxed max-w-xl mb-10 font-sans"
+        style={{animationDelay: '400ms'}}
       >
         {t('bio')}
-      </motion.p>
+      </p>
 
-      <motion.div {...fadeUp(0.5)} className="flex flex-wrap items-center gap-4">
+      <div className="anim-fade-up flex flex-wrap items-center gap-4" style={{animationDelay: '500ms'}}>
         <a
           href="/CV_Antonio_Goulao_FE.pdf"
           download
@@ -120,7 +116,7 @@ export function Hero({locale}: {locale: string}) {
         >
           LinkedIn
         </a>
-      </motion.div>
+      </div>
     </section>
   );
 }

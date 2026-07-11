@@ -1,22 +1,14 @@
-'use client';
-import {useRef} from 'react';
-import {motion, useInView} from 'framer-motion';
 import {useTranslations} from 'next-intl';
 import {experience, type ExperienceEntry} from '@/content/experience';
 import {SectionDivider} from '@/components/SectionDivider';
 
 function EntryRow({entry, index, tExp}: {entry: ExperienceEntry; index: number; tExp: ReturnType<typeof useTranslations>}) {
-  const ref = useRef<HTMLDivElement>(null);
-  const inView = useInView(ref, {once: true, margin: '-60px'});
   const description = tExp.raw(entry.key) as string | string[];
 
   return (
-    <motion.div
-      ref={ref}
-      initial={{opacity: 0, x: -16}}
-      animate={inView ? {opacity: 1, x: 0} : {}}
-      transition={{duration: 0.45, delay: index * 0.1}}
-      className="flex gap-4"
+    <div
+      className="anim-fade-left flex gap-4"
+      style={{animationDelay: `${index * 100}ms`}}
     >
       <div className="flex flex-col items-center pt-1.5">
         <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
@@ -52,7 +44,7 @@ function EntryRow({entry, index, tExp}: {entry: ExperienceEntry; index: number; 
           </div>
         )}
       </div>
-    </motion.div>
+    </div>
   );
 }
 

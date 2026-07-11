@@ -15,7 +15,7 @@ const config: Config = {
   ],
   testPathIgnorePatterns: ['/node_modules/', '/.worktrees/'],
   transformIgnorePatterns: [
-    '/node_modules/(?!(framer-motion|next-mdx-remote|remark-gfm)/)',
+    '/node_modules/(?!(next-mdx-remote|remark-gfm)/)',
   ],
 };
 

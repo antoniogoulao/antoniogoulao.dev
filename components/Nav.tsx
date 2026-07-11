@@ -2,7 +2,6 @@
 import Link from 'next/link';
 import {useEffect, useState} from 'react';
 import {usePathname} from 'next/navigation';
-import {motion} from 'framer-motion';
 import {useTranslations} from 'next-intl';
 import {ThemeToggle} from './ThemeToggle';
 import {LanguageSwitcher} from './LanguageSwitcher';
@@ -51,12 +50,7 @@ export function Nav({locale}: {locale: string}) {
   const booksActive = pathname.startsWith(`/${locale}/books`);
 
   return (
-    <motion.header
-      initial={{y: -16, opacity: 0}}
-      animate={{y: 0, opacity: 1}}
-      transition={{duration: 0.4}}
-      className="sticky top-0 z-50 border-b border-surface bg-background/90 backdrop-blur-md"
-    >
+    <header className="sticky top-0 z-50 border-b border-surface bg-background/90 backdrop-blur-md">
       <nav className="max-w-4xl mx-auto flex items-center justify-between px-6 py-4">
         <Link href={`/${locale}`} className="font-serif italic text-xl text-primary leading-none">
           ag.
@@ -98,6 +92,6 @@ export function Nav({locale}: {locale: string}) {
           <ThemeToggle />
         </div>
       </nav>
-    </motion.header>
+    </header>
   );
 }

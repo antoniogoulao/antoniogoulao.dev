@@ -12,18 +12,6 @@ jest.mock('next/link', () => ({
   ),
 }));
 
-jest.mock('framer-motion', () => {
-  const React = require('react');
-  return {
-    motion: new Proxy({}, {
-      get(_: unknown, tag: string) {
-        return ({children, initial: _i, animate: _a, transition: _t, ...props}: {children?: React.ReactNode; initial?: unknown; animate?: unknown; transition?: unknown} & React.HTMLAttributes<HTMLElement>) =>
-          React.createElement(tag, props, children);
-      },
-    }),
-  };
-});
-
 describe('Hero gradient', () => {
   it('applies a radial-gradient to the section background on render', () => {
     const {container} = render(<Hero locale="en-GB" />);
