@@ -1,9 +1,10 @@
 import type {Metadata} from 'next';
 import {Instrument_Serif, Space_Grotesk} from 'next/font/google';
 import {NextIntlClientProvider} from 'next-intl';
-import {getMessages, setRequestLocale} from 'next-intl/server';
+import {getMessages, getTranslations, setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {routing, type Locale} from '@/i18n/routing';
+import {SITE_URL} from '@/lib/seo';
 import {ThemeProvider} from '@/components/ThemeProvider';
 import {Nav} from '@/components/Nav';
 import {Footer} from '@/components/Footer';
@@ -23,10 +24,26 @@ const spaceGrotesk = Space_Grotesk({
   display: 'swap',
 });
 
-export const metadata: Metadata = {
-  title: 'António Goulão',
-  description: 'Mobile Engineer · Rider · Reader',
-};
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{locale: string}>;
+}): Promise<Metadata> {
+  const {locale} = await params;
+  const t = await getTranslations({locale, namespace: 'meta'});
+  return {
+    metadataBase: new URL(SITE_URL),
+    title: {default: 'António Goulão', template: '%s · António Goulão'},
+    description: t('siteDescription'),
+    openGraph: {
+      siteName: 'António Goulão',
+      type: 'website',
+      locale,
+      images: ['/og.png'],
+    },
+    twitter: {card: 'summary_large_image'},
+  };
+}
 
 export function generateStaticParams() {
   return routing.locales.map(locale => ({locale}));

@@ -2,8 +2,24 @@ import {setRequestLocale, getTranslations, getFormatter} from 'next-intl/server'
 import {MDXRemote} from 'next-mdx-remote/rsc';
 import remarkGfm from 'remark-gfm';
 import Link from 'next/link';
-import {getPostContent, getPostSlugs} from '@/lib/mdx';
+import {getPostContent, getPostMeta, getPostSlugs} from '@/lib/mdx';
 import {routing} from '@/i18n/routing';
+import {localeAlternates} from '@/lib/seo';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{locale: string; slug: string}>;
+}) {
+  const {locale, slug} = await params;
+  const meta = getPostMeta(slug, locale);
+  const localesWithPost = routing.locales.filter(l => getPostSlugs(l).includes(slug));
+  return {
+    title: meta.title,
+    description: meta.excerpt,
+    alternates: localeAlternates(`/blog/${slug}`, locale, localesWithPost),
+  };
+}
 
 export async function generateStaticParams() {
   const params: {locale: string; slug: string}[] = [];

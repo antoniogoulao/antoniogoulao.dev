@@ -1,4 +1,7 @@
 {
+  "meta": {
+    "siteDescription": "Desarrollador Sénior Mobile & Frontend en Lisboa — más de 10 años de experiencia, los últimos 8 en productos mobile-first con React Native y el ecosistema React/TypeScript. Actualmente en UpHill."
+  },
   "nav": {
     "about": "Sobre mí",
     "work": "Trabajo",

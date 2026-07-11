@@ -6,6 +6,16 @@ import {Skills} from '@/components/home/Skills';
 import {Projects} from '@/components/home/Projects';
 import {Contact} from '@/components/home/Contact';
 import {fetchGitHubRepos} from '@/lib/github';
+import {localeAlternates} from '@/lib/seo';
+
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{locale: string}>;
+}) {
+  const {locale} = await params;
+  return {alternates: localeAlternates('', locale)};
+}
 
 export default async function HomePage({
   params,
