@@ -3,6 +3,13 @@ import {useState} from 'react';
 import {useTranslations} from 'next-intl';
 import {SectionDivider} from '@/components/SectionDivider';
 
+export function contactMailto(name: string, email: string, message: string): string | null {
+  if (!name || !email || !message) return null;
+  const subject = encodeURIComponent(`Message from ${name}`);
+  const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
+  return `mailto:antoniomgoulao@gmail.com?subject=${subject}&body=${body}`;
+}
+
 export function Contact() {
   const t = useTranslations('contact');
   const ts = useTranslations('sections');
@@ -13,10 +20,8 @@ export function Contact() {
 
   function handleSubmit(e: React.FormEvent) {
     e.preventDefault();
-    if (!name || !email || !message) return;
-    const subject = encodeURIComponent(`Message from ${name}`);
-    const body = encodeURIComponent(`Name: ${name}\nEmail: ${email}\n\n${message}`);
-    window.location.href = `mailto:antoniomgoulao@gmail.com?subject=${subject}&body=${body}`;
+    const href = contactMailto(name, email, message);
+    if (href) window.location.href = href;
   }
 
   return (

@@ -1,5 +1,5 @@
-import {render, screen, fireEvent} from '@testing-library/react';
-import {Contact} from '@/components/home/Contact';
+import {render, screen} from '@testing-library/react';
+import {Contact, contactMailto} from '@/components/home/Contact';
 
 jest.mock('next-intl', () => ({
   useTranslations: () => (key: string) => key,
@@ -8,14 +8,6 @@ jest.mock('next-intl', () => ({
 jest.mock('@/components/SectionDivider', () => ({
   SectionDivider: ({label}: {label: string}) => <div data-testid="section-divider">{label}</div>,
 }));
-
-beforeEach(() => {
-  Object.defineProperty(window, 'location', {
-    configurable: true,
-    writable: true,
-    value: {href: ''},
-  });
-});
 
 describe('Contact form', () => {
   it('renders all form fields and the send button', () => {
@@ -26,30 +18,17 @@ describe('Contact form', () => {
     expect(screen.getByRole('button', {name: 'send'})).toBeInTheDocument();
   });
 
-  it('builds a mailto URL with URL-encoded field values on submit', () => {
-    render(<Contact />);
-
-    fireEvent.change(screen.getByPlaceholderText('namePlaceholder'), {
-      target: {value: 'Test User'},
-    });
-    fireEvent.change(screen.getByPlaceholderText('emailPlaceholder'), {
-      target: {value: 'test@example.com'},
-    });
-    fireEvent.change(screen.getByPlaceholderText('messagePlaceholder'), {
-      target: {value: 'Hello world'},
-    });
-
-    fireEvent.click(screen.getByRole('button', {name: 'send'}));
-
-    expect(window.location.href).toContain('mailto:antoniomgoulao@gmail.com');
-    expect(window.location.href).toContain('Test%20User');
-    expect(window.location.href).toContain('test%40example.com');
-    expect(window.location.href).toContain('Hello%20world');
+  it('builds a mailto URL with URL-encoded field values', () => {
+    const href = contactMailto('Test User', 'test@example.com', 'Hello world');
+    expect(href).toContain('mailto:antoniomgoulao@gmail.com');
+    expect(href).toContain('Test%20User');
+    expect(href).toContain('test%40example.com');
+    expect(href).toContain('Hello%20world');
   });
 
-  it('does not navigate when fields are empty', () => {
-    render(<Contact />);
-    fireEvent.click(screen.getByRole('button', {name: 'send'}));
-    expect(window.location.href).toBe('');
+  it('returns null when any field is empty', () => {
+    expect(contactMailto('', 'test@example.com', 'Hello')).toBeNull();
+    expect(contactMailto('Test', '', 'Hello')).toBeNull();
+    expect(contactMailto('Test', 'test@example.com', '')).toBeNull();
   });
 });

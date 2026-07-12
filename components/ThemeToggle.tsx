@@ -6,6 +6,8 @@ export function ThemeToggle() {
   const {resolvedTheme, setTheme} = useTheme();
   const [mounted, setMounted] = useState(false);
 
+  // One-time mount flag to avoid a hydration mismatch on the theme icon.
+  // eslint-disable-next-line react-hooks/set-state-in-effect
   useEffect(() => setMounted(true), []);
 
   if (!mounted) return <div className="w-8 h-8" aria-hidden="true" />;

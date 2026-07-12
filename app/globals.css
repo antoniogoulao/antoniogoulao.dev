@@ -1,6 +1,8 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+@config '../tailwind.config.js';
+
+/* darkMode: 'class' equivalent — next-themes sets .dark on <html> */
+@custom-variant dark (&:where(.dark, .dark *));
 
 /* Light mode — default. Primary/secondary/muted darkened to pass WCAG AA
    (4.5:1) for small text on the cream background. */
