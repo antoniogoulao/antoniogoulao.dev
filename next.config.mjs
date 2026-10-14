@@ -7,6 +7,7 @@ const nextConfig = {
   output: 'export',
   trailingSlash: true,
   images: {unoptimized: true},
+  agentRules: false,
 };
 
 export default withNextIntl(nextConfig);

@@ -12,7 +12,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "npx serve@14.2.6 out",
     "test": "jest",
     "test:watch": "jest --watch",
     "lint": "eslint ."
